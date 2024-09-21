@@ -1,0 +1,23 @@
+@import '../variables.scss';
+.Navigation {
+    // border: 1px solid blanchedalmond;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+
+    li {
+        list-style: none;
+        height: 100%;
+        // background: cyan;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            color: $colorGreen;
+        }
+    }
+}

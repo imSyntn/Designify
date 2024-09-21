@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+.bannerWrapper {
+    margin-block: 200px;
+    display: flex;
+    justify-content: center;
+    margin-inline: calc($defaultPaddingInline + 20px);
+
+    .Banner {
+        height: 144px;
+        width: 90%;
+        background-color: #e1f6e3;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        padding-inline: 100px;
+        overflow: hidden;
+
+        h2 {
+            color: $colorGreen;
+        }
+
+        h2, button {
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            width: 500px;
+            // height: 100%;
+            aspect-ratio: 2/5;
+            background: url('https://printify.com/pfh/media/talk-to-sales-N2GDBAGC.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            // display: block;
+            top: 0;
+            right: -20px;
+            z-index: 1;
+        }
+    }
+}

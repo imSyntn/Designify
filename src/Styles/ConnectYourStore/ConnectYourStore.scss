@@ -1,0 +1,144 @@
+@import '../variables.scss';
+
+.ConnectYourStore {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 90px;
+    padding-inline: $defaultPaddingInline;
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    p {
+        color: $colorGray;
+    }
+
+    .storeOptions {
+        width: 100%;
+        height: 80vh;
+        // border: 1px solid black;
+        position: relative;
+
+        .card {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.475);
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+
+            img {
+                width: 50px;
+                // height: 50%;
+            }
+            h1 {
+                margin: 0;
+            }
+        }
+
+        .presta {
+            top: 65%;
+            left: 36%;
+            transform: translate(-65%, -36%);
+            &:hover {
+                transform: translate(-65%, -36%) scale(1.2);
+            }
+        }
+        .wix {
+            top: 20%;
+            left: 90%;
+            transform: translate(-20%, -90%);
+            &:hover {
+                transform: translate(-20%, -90%) scale(1.2);
+            }
+        }
+        .woo {
+            height: 70px;
+            width: 70px;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -70%);
+            &:hover {
+                transform: translate(-50%, -70%) scale(1.2);
+            }
+        }
+        .squarespace {
+            top: 30%;
+            left: 65%;
+            transform: translate(-30%, -65%);
+            &:hover {
+                transform: translate(-30%, -65%) scale(1.2);
+            }
+        }
+        .shopify {
+            height: 120px;
+            width: 120px;
+            top: 80%;
+            left: 63%;
+            transform: translate(-80%, -63%);
+            &:hover {
+                transform: translate(-80%, -63%) scale(1.2);
+            }
+        }
+        .and-more {
+            height: 50px;
+            width: 50px;
+            top: 75%;
+            left: 45%;
+            transform: translate(-75%, -45%);
+            &:hover {
+                transform: translate(-75%, -45%) scale(1.2);
+            }
+        }
+        .etsy {
+            height: 120px;
+            width: 120px;
+            top: 80%;
+            left: 87%;
+            transform: translate(-80%, -87%);
+            &:hover {
+                transform: translate(-80%, -87%) scale(1.2);
+            }
+        }
+        .API {
+            height: 150px;
+            width: 150px;
+            top: 76%;
+            left: 20%;
+            transform: translate(-76%, -20%);
+            &:hover {
+                transform: translate(-80%, -20%) scale(1.2);
+            }
+        }
+        .BigCommerce {
+            height: 70px;
+            width: 70px;
+            top: 10%;
+            left: 35%;
+            transform: translate(-10%, -35%);
+            &:hover {
+                transform: translate(-10%, -35%) scale(1.2);
+            }
+        }
+        .main {
+            background: $colorGreen;
+            height: 150px;
+            width: 150px;
+            &:hover {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+    }
+}

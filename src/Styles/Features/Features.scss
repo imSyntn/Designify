@@ -1,0 +1,10 @@
+@import '../variables.scss';
+
+.Features {
+    height: 500px;
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-inline: $defaultPaddingInline;
+}

@@ -1,0 +1,26 @@
+.HowItWorks {
+    // border: 1px solid red;
+    height: 100vh;
+    background-color: rgba(210, 210, 210, 0.242);
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 50px;
+        top: 0;
+        left: 50%;
+        background: url(https://printify.com/pfh/media/arrow-down-S7NHO6CI.svg);
+        transform: translateX(-50%);
+        // background
+        background-size: 300px 50px;
+        background-repeat: no-repeat;
+        filter: invert(100%);
+        // z-index: 1;
+    }
+    &::after {
+        top: 100%;
+        filter: invert(96%);
+    }
+}

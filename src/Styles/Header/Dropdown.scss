@@ -1,0 +1,38 @@
+@import '../variables.scss';
+
+.Dropdown {
+    // border: 1px solid red;
+    // ul {
+    //     display: none;
+    // }
+    position: relative;
+    >p {
+        display: flex;
+        align-items: center;
+        svg {
+            transition: all 0.3s;
+        }
+        .rotate {
+            transform: rotate(180deg);
+        }
+    }
+    >ul {
+        // border: 1px solid rgb(38, 0, 255);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.493);
+        background: white;
+        width: 210px;
+        padding: 10px;
+        position: absolute;
+        top: 99%;
+        left: 0;
+        p {
+            font-size: 16px;
+            padding: 5px 7px;
+            color: black;
+
+            &:hover {
+                color: $colorGreen;
+            }
+        }
+    }
+}
