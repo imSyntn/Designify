@@ -1,10 +1,24 @@
 @import '../variables.scss';
 
 .Features {
-    height: 500px;
+    min-height: 500px;
     // border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding-inline: $defaultPaddingInline;
+}
+
+@media screen and (max-width: 1250px) {
+    .Features {
+        padding-inline: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .Features {
+        flex-direction: column;
+        align-items: center;
+        margin-block: 40px;
+    }
 }

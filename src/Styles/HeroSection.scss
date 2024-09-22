@@ -2,24 +2,22 @@
 
 .HeroSection {
     margin-top: 50px;
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
     display: flex;
     align-items: end;
     justify-content: center;
     padding-inline: $defaultPaddingInline;
-    // background: aquamarine;
 
     .banner {
-        // border: 1px solid black;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 56px 24px;
+        padding: 56px 0px;
         position: relative;
         overflow: hidden;
 
         .banner-item-left {
-            // border: 1px solid blue;
             height: 100%;
             width: 500px;
 
@@ -72,8 +70,7 @@
         }
 
         .banner-item-right {
-            // border: 1px solid rgb(236, 6, 6);
-            margin-left: 180px;
+            height: 100%;
         }
 
         &::after {
@@ -87,6 +84,57 @@
             z-index: -1;
             background: rgba(210, 210, 210, 0.242);
             // border-bottom-right-radius: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .HeroSection {
+        padding-inline: 0px;
+        .banner {
+            .banner-item-left {
+                padding-left: 20px;
+            }
+            .banner-item-right {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 950px) {
+    .HeroSection {
+        .banner {
+            flex-direction: column;
+            // justify-content: spa;
+            .banner-item-left {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .HeroSection {
+        .banner {
+            padding-top: 100px;
+            .banner-item-left {
+                width: 100%;
+                padding-inline: 20px;
+                h1 {
+                    font-size: 32px;
+                    width: 320px;
+                }
+                .btns {
+                    flex-wrap: wrap;
+                    button {
+                        &:nth-child(1) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .banner-item-right {
+                width: 100%;
+            }
         }
     }
 }

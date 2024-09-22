@@ -17,3 +17,15 @@
         line-height: 24px;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .FeatureCard {
+        // flex-direction: column;
+        height: 250px;
+        align-items: center;
+        margin-block: 20px;
+        p {
+            text-align: center;
+        }
+    }
+}

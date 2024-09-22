@@ -1,0 +1,36 @@
+@import '../variables.scss';
+
+.HowItWorksCards {
+    width: 360px;
+    color: $colorGray;
+    margin-right: 20px;
+    img {
+        width: 156px;
+        height: 156px;
+    }
+    h2 {
+        margin-top: 10px;
+        color: $colorGreen;
+        &:nth-of-type(2) {
+            color: $colorGray;
+        }
+    }
+    p {
+        margin-top: 20px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .HowItWorksCards {
+        min-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin-right: 0px;
+        P {
+            text-align: center;
+        }
+    }
+}

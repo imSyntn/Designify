@@ -20,10 +20,11 @@
         overflow: hidden;
 
         h2 {
-            color: $colorGreen;
+            color: #1F6548;
         }
 
-        h2, button {
+        h2,
+        button {
             z-index: 2;
         }
 
@@ -40,6 +41,29 @@
             top: 0;
             right: -20px;
             z-index: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .bannerWrapper {
+        margin-inline: 20px;
+
+        .Banner {
+            width: 100%;
+            padding-inline: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .bannerWrapper {
+        margin-block: 100px;
+        .Banner {
+            height: 100px;
+            h2 {
+                font-size: 18px;
+            }
         }
     }
 }

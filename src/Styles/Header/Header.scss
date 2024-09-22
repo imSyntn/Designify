@@ -14,15 +14,137 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.333);
+
+    >svg {
+        display: none;
+    }
+
     >h1 {
         color: $colorGreen;
     }
+
     >.btns {
         display: flex;
+
         button {
             &:nth-of-type(2) {
                 margin-left: 20px;
             }
+        }
+    }
+    .navContainerMobileView  {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    header {
+        padding-inline: 20px;
+
+        >.btns {
+            button {
+                &:nth-of-type(2) {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+header {
+    .navContainerMobileView {
+        background-color: white;
+        border: 1px solid red;
+        height: 100vh;
+        width: 250px;
+        position: fixed;
+        top: 0px;
+        left: -100%;
+        transition: all 0.3s;
+
+        >.navText {
+            padding: 10px;
+            position: relative;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.317);
+
+            h1 {
+                text-align: center;
+                font-size: 24px;
+            }
+
+            svg {
+                font-size: 20px;
+                color: $colorGreen;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+
+        }
+
+        .Navigation {
+            padding: 20px;
+            height: fit-content;
+            width: fit-content;
+            flex-direction: column;
+            // justify-content: space-evenly;
+            align-items: start;
+
+            li {
+                height: fit-content;
+                margin-block: 10px;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            .Dropdown {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+
+                >ul {
+                    position: relative;
+                    top: 0;
+                    box-shadow: none;
+
+                    >p {
+                        font-size: 17px;
+                        font-weight: 500;
+                        margin-block: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .display {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    header {
+
+        // position: fixed;
+        >svg {
+            display: block;
+            font-size: 25px;
+            fill: $colorGreen;
+            cursor: pointer;
+        }
+
+        >h1 {
+            position: absolute;
+            left: 55px;
+        }
+
+        >.Navigation {
+            display: none;
+        }
+        >.navContainerMobileView {
+            display: block;
         }
     }
 }
