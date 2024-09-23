@@ -138,3 +138,20 @@
         }
     }
 }
+@media screen and (max-width: 392px) {
+    .HeroSection {
+        .banner {
+            .banner-item-left {
+                .btns {
+                    button {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 0px !important;
+                    }
+                }
+            }
+        }
+    }
+}
