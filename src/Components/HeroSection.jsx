@@ -4,9 +4,8 @@ import { FaCheck } from "react-icons/fa6";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
 import Button from './Button';
 
-const pros = ['100% Free to use', '900+ High-Quality Products', 'Largest global print network']
+import { pros } from './Data';  // to make the code more readable I put all the mock data inside a file
 
-// const style = []
 
 const HeroSection = () => {
     return (

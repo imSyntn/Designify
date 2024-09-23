@@ -5,56 +5,21 @@ import Navigation from './Navigation'
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 
-const buttonArray = [{
-    text: 'Log in',
-    style: {
-        border: '0.5px solid #b7b7b7',
-        height: '36px'
-    },
-    hover: 'white'
-}, {
-    text: 'Sign up',
-    style: {
-        backgroundColor: '#39B75D',
-        color: 'white',
-        height: '36px'
-    },
-    hover: 'green'
-}]
+import { buttonArray, navArray } from '../Data'; // to make the code more readable I put all the mock data inside a file
 
-
-const navArray = [{
-    text: 'Catalog'
-}, {
-    text: 'How it works',
-    child: ['How Designify Works', 'Print On Demand', 'Designify Quality Promise', 'What to Sell?']
-}, {
-    text: 'Pricing'
-}, {
-    text: 'Blog'
-}, {
-    text: 'Services',
-    child: ['Designify Studio', 'Designify Express Delivery', 'Transfer Products', 'Order in Bulk', 'Experts Program']
-}, {
-    text: 'Use-cases',
-    child: ['Merch for Fans', 'Merch for eCommerce', 'Merch for Enterprises', 'Grow Your Store']
-}, {
-    text: 'Need help?',
-    child: ['Help Center', 'Contacts', 'My Requests']
-}]
 
 const Header = () => {
 
-    const [showNav, setShowNav] = useState(false)
+    const [showNav, setShowNav] = useState(false) // this state is used to toggle the navigation while in mobile view
 
     return (
         <header>
-            <FaBars onClick={() => setShowNav(true)} />
+            <FaBars onClick={() => setShowNav(true)} /> {/* on clicking the svg the state will updated as true and the naigation will appear. It's only visible in mobile view */}
             <h1>Designify</h1>
-            <Navigation navArray={navArray} />
+            <Navigation navArray={navArray} /> {/* it's only visible in desktop view */}
 
 
-            <div className={`navContainerMobileView ${showNav ? 'display' : ''}`}>
+            <div className={`navContainerMobileView ${showNav ? 'display' : ''}`}> {/* this div will appear on mobile view */}
                 <div className="navText">
                     <h1>Menu</h1>
                     <RxCross2 onClick={() => setShowNav(false)} />

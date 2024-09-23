@@ -8,9 +8,9 @@ const Navigation = ({navArray}) => {
         {
             navArray.map(item => (
                 !item.child ? (
-                    <li key={item.text}>{item.text}</li>
+                    <li key={item.text}>{item.text}</li> /* if the item has no nested child then render only the item */
                 ) : (
-                    <Dropdown key={item.text} data={item} />
+                    <Dropdown key={item.text} data={item} /> /* if the item has nested child then render the nested childs */
                 )
             ))
         }

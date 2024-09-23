@@ -1,23 +1,14 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import Header from './Components/Header/Header'
-import HeroSection from './Components/HeroSection'
-import Features from './Components/Features/Features'
-import HowItWorks from './Components/HowItWorks/HowItWorks'
-import ConnectYourStore from './Components/ConnectYourStore/ConnectYourStore'
-import Banner from './Components/Banner'
-import Reviews from './Components/Reviews/Reviews'
-import Financials from './Components/Financials'
-import Footer from './Components/Footer'
-import Loader from './Components/Loader'
+import { Header, HeroSection, HowItWorks, Features, ConnectYourStore, Banner, Reviews, Financials, Footer, Loader } from './Components/Index'
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false) // This state is used to show and hide the Loader
 
-  useEffect(() => {
-    setInterval(()=> {
+  useEffect(() => {  // If all the components are rendered then after 1 second the isLoaded state will be false and the Loader will be invisible
+    setTimeout(() => {
       setIsLoaded(true)
-    },1000)
+    }, 1000)
   }, [])
 
   return (
