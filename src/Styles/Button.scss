@@ -12,3 +12,15 @@ button {
     align-items: center;
     cursor: pointer;
 }
+
+.green {
+    &:hover {
+        background-color: #2f944c !important;
+    }
+}
+.white {
+    &:hover {
+        color: $colorGreen;
+    }
+
+}

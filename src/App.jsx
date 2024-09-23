@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Header from './Components/Header/Header'
 import HeroSection from './Components/HeroSection'
@@ -9,22 +9,33 @@ import Banner from './Components/Banner'
 import Reviews from './Components/Reviews/Reviews'
 import Financials from './Components/Financials'
 import Footer from './Components/Footer'
+import Loader from './Components/Loader'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setInterval(()=> {
+      setIsLoaded(true)
+    },1000)
+  }, [])
 
   return (
-    <>
-      <Header />
-      <HeroSection />
-      <Features />
-      <HowItWorks />
-      <ConnectYourStore />
-      <Banner />
-      <Reviews />
-      <Financials />
-      <Footer />
-    </>
+    !isLoaded ? (
+      <Loader />
+    ) : (
+      <>
+        <Header />
+        <HeroSection />
+        <Features />
+        <HowItWorks />
+        <ConnectYourStore />
+        <Banner />
+        <Reviews />
+        <Financials />
+        <Footer />
+      </>
+    )
   )
 }
 

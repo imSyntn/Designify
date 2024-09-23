@@ -1,7 +1,7 @@
 @import '../variables.scss';
 
 .Reviews {
-    min-height: 100vh;
+    min-height: fit-content;
     background-color: rgba(210, 210, 210, 0.242);
     padding: calc($defaultPaddingInline - 40px) calc($defaultPaddingInline + 40px);
     position: relative;
@@ -81,11 +81,13 @@
 
 @media screen and (max-width: 1250px) {
     .Reviews {
-        padding: 20px;
+        padding-inline: 20px;
     }
 }
 @media screen and (max-width: 900px) {
     .Reviews {
+        padding-top: 0px;
+        padding-bottom: 50px;
         .text {
             flex-direction: column;
             padding-block: 50px;

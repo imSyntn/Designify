@@ -2,7 +2,7 @@ import React from 'react'
 import '../../Styles/Features/FeatureCard.scss'
 
 const FeatureCard = ({source, heading, description}) => {
-    console.log(source)
+
   return (
     <div className='FeatureCard'>
         <img src={source} alt="" />

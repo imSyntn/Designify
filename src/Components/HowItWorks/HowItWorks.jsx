@@ -35,7 +35,9 @@ const HowItWorks = () => {
   return (
     <div className='HowItWorks'>
       <div className="textCont">
-        <div className="imgSvg"></div>
+        <div className="imgSvg">
+          <img className='svg' src="../../../shirt.svg" alt="" />
+        </div>
         <div className="text">
           <h1>Easily add your design to a wide range of products</h1>
           <p>With our free design tools, you can easily add your custom designs to t-shirts, mugs, phone cases, and hundreds of other products.</p>

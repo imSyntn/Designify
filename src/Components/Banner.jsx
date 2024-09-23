@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="bannerWrapper">
             <div className='Banner'>
                 <h2>Are you a large business looking<br />for custom solutions?</h2>
-                <Button text={'Talk to sales'} />
+                <Button text={'Talk to sales'} hover={'white'} />
             </div>
         </div>
     )

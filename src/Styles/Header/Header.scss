@@ -54,13 +54,14 @@ header {
 header {
     .navContainerMobileView {
         background-color: white;
-        border: 1px solid red;
+        // border: 1px solid red;
         height: 100vh;
         width: 250px;
         position: fixed;
         top: 0px;
         left: -100%;
-        transition: all 0.3s;
+        // box-shadow: none;
+        transition: left 0.2s;
 
         >.navText {
             padding: 10px;
@@ -121,6 +122,7 @@ header {
 
     .display {
         left: 0;
+        box-shadow: 0px 0px 50px calc(100vw - 200px) rgba(0, 0, 0, 0.489);
     }
 }
 
@@ -145,6 +147,17 @@ header {
         }
         >.navContainerMobileView {
             display: block;
+        }
+    }
+}
+@media screen and (max-width: 408px) {
+    header {
+        >h1 {
+            font-size: 25px;
+            left: 45px;
+        }
+        svg {
+            font-size: 20px;
         }
     }
 }

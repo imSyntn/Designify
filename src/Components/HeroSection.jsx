@@ -20,8 +20,8 @@ const HeroSection = () => {
                         ))
                     }
                     <div className="btns">
-                        <Button classValue='leftBtn' text={'Start for free'} />
-                        <Button classValue='rightBtn' Icon={MdOutlinePlayCircleOutline} text={'How it works?'} />
+                        <Button classValue='leftBtn' text={'Start for free'} hover={'green'} />
+                        <Button classValue='rightBtn' Icon={MdOutlinePlayCircleOutline} text={'How it works?'} hover={'white'} />
                     </div>
                     <p className='bottom-p'>Trusted by over 8M sellers around the world</p>
                 </div>

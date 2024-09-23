@@ -10,14 +10,16 @@ const buttonArray = [{
     style: {
         border: '0.5px solid #b7b7b7',
         height: '36px'
-    }
+    },
+    hover: 'white'
 }, {
     text: 'Sign up',
     style: {
         backgroundColor: '#39B75D',
         color: 'white',
         height: '36px'
-    }
+    },
+    hover: 'green'
 }]
 
 
@@ -63,7 +65,7 @@ const Header = () => {
             <div className="btns">
                 {
                     buttonArray.map(item => (
-                        <Button key={item.text} text={item.text} style={item.style} />
+                        <Button key={item.text} text={item.text} hover={item.hover} style={item.style} />
                     ))
                 }
             </div>
