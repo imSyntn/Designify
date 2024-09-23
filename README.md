@@ -13,6 +13,7 @@ This project is a homepage built using ReactJS inspired by the design of [Printi
 ## Technologies Used
 - **ReactJS**: Core framework for building the UI.
 - **SASS**: For responsive styling and design.
+- **Framer Motion**: For smooth animations.
 - **Netlify**: For live deployment of the project.
 
 ## Installation
@@ -25,7 +26,7 @@ This project is a homepage built using ReactJS inspired by the design of [Printi
 2. Navigate to the project directory:
 
 ```bash
-   cd designify
+   cd Designify
 ```
 
 3. Install dependencies:
